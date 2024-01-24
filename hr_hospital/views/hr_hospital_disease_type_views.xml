@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="hr_hospital_disease_type_action" model="ir.actions.act_window">
+        <field name="name">Disease types</field>
+        <field name="res_model">hr_hospital.disease.type</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="hr_hospital_disease_type_view_tree" model="ir.ui.view">
+        <field name="name">hr_hospital.disease.type.tree</field>
+        <field name="model">hr_hospital.disease.type</field>
+        <field name="arch" type="xml">
+            <tree string="Disease types">
+                <field name="name"/>
+                <field name="parent_id"/>
+                <field name="child_ids" widget="many2many_tags"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="hr_hospital_disease_type_view_form" model="ir.ui.view">
+        <field name="name">hr_hospital.disease.type.form</field>
+        <field name="model">hr_hospital.disease.type</field>
+        <field name="arch" type="xml">
+            <form string="Disease types">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="parent_id"/>
+                        <field name="child_ids" widget="many2many_tags"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>
