@@ -8,10 +8,11 @@ class Patient(models.Model):
 
     _inherit = 'hr_hospital.person'
 
-    birth_date = fields.Date(string='Date of Birth')
-    age = fields.Integer(compute='_compute_age', store=True)
+    full_name = fields.Char(string='Patient name', required=True)
+    birth_date = fields.Date(string='Date of Birth', required=True)
+    age = fields.Integer(compute='_compute_age', store=True, readonly=True)
     passport_data = fields.Char(string='Passport Data')
-    contact_person = fields.Many2one('hr_hospital.person', string='Contact Person')
+    contact_person = fields.Many2one('hr_hospital.contact_person', string='Contact Person')
 
     @api.depends('birth_date')
     def _compute_age(self):

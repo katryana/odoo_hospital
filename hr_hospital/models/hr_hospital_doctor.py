@@ -6,6 +6,7 @@ class Doctor(models.Model):
     _name = 'hr_hospital.doctor'
     _inherit = 'hr_hospital.person'
 
+    full_name = fields.Char(string='Doctor name', required=True)
     specialty = fields.Char()
     is_intern = fields.Boolean()
     mentor_id = fields.Many2one('hr_hospital.doctor', domain="[('is_intern', '=', False)]")
