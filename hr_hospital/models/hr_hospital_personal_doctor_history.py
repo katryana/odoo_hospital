@@ -8,8 +8,7 @@ class PersonalDoctorHistory(models.Model):
     doctor = fields.Many2one('hr_hospital.doctor')
     assignment_date = fields.Date()
 
-    @api.onchange('personal_doctor')
-    def _onchange_personal_doctor(self):
+    @api.onchange('doctor')
+    def _onchange_doctor(self):
         for record in self:
-            if record.doctor:
-                record.assignment_date = fields.Date.today()
+            record.assignment_date = fields.Date.today()

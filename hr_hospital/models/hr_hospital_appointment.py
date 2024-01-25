@@ -6,6 +6,7 @@ class Appointment(models.Model):
     _name = 'hr_hospital.appointment'
 
     doctor = fields.Many2one('hr_hospital.doctor')
+    doctor_schedule = fields.Many2one('hr_hospital.doctor_schedule')
     patient = fields.Many2one('hr_hospital.patient')
     appointment_datetime = fields.Datetime()
     diagnosis = fields.Many2one('hr_hospital.diagnosis')

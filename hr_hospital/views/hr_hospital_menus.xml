@@ -5,12 +5,17 @@
         <menuitem id="hr_hospital_patient_reception_menu" name="Patients archive">
             <menuitem id="hr_hospital_patient_menu_action" action="hr_hospital_patient_action"/>
             <menuitem id="hr_hospital_diagnosis_type_menu_action" action="hr_hospital_diagnosis_action"/>
+            <menuitem id="hr_hospital_personal_doctor_history_menu_action" action="hr_hospital_personal_doctor_history_action"/>
         </menuitem>
         <menuitem id="hr_hospital_doctor_management_menu" name="Management of doctors">
             <menuitem id="hr_hospital_doctor_menu_action" action="hr_hospital_doctor_action"/>
+            <menuitem id="hr_hospital_doctor_schedule_menu_action" action="hr_hospital_doctor_schedule_action"/>
             <menuitem id="hr_hospital_appointment_menu_action" action="hr_hospital_appointment_action"/>
         </menuitem>
         <menuitem id="hr_hospital_research_activity_menu" name="Research activities">
+            <menuitem id="hr_hospital_research_menu_action" action="hr_hospital_research_action"/>
+            <menuitem id="hr_hospital_research_type_menu_action" action="hr_hospital_research_type_action"/>
+            <menuitem id="hr_hospital_sample_menu_action" action="hr_hospital_sample_action"/>
             <menuitem id="hr_hospital_disease_menu_action" action="hr_hospital_disease_action"/>
             <menuitem id="hr_hospital_disease_type_menu_action" action="hr_hospital_disease_type_action"/>
         </menuitem>

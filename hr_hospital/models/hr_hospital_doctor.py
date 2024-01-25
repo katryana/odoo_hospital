@@ -13,5 +13,5 @@ class Doctor(models.Model):
     @api.constrains('is_intern', 'mentor_id')
     def _check_intern_mentor(self):
         for doctor in self:
-            if doctor.is_intern and doctor.mentor_id:
-                raise ValidationError("Interns cannot have mentors.")
+            if doctor.is_intern and not doctor.mentor_id:
+                raise ValidationError("Interns must have mentors.")

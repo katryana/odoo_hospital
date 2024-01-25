@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="hr_hospital_personal_doctor_history_action" model="ir.actions.act_window">
+        <field name="name">Personal doctor history</field>
+        <field name="res_model">hr_hospital.personal_doctor_history</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="hr_hospital_personal_doctor_history_view_tree" model="ir.ui.view">
+        <field name="name">hr_hospital.personal_doctor_history.tree</field>
+        <field name="model">hr_hospital.personal_doctor_history</field>
+        <field name="arch" type="xml">
+            <tree string="Personal doctor history">
+                <field name="doctor"/>
+                <field name="patient"/>
+                <field name="assignment_date"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="hr_hospital_personal_doctor_history_view_form" model="ir.ui.view">
+        <field name="name">hr_hospital.personal_doctor_history.form</field>
+        <field name="model">hr_hospital.personal_doctor_history</field>
+        <field name="arch" type="xml">
+            <form string="Personal doctor history">
+                <sheet>
+                    <group>
+                        <field name="doctor"/>
+                        <field name="patient"/>
+                        <field name="assignment_date"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>
